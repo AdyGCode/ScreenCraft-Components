@@ -33,7 +33,8 @@ function generateSwatches( colors ) {
             paragraph.classList.add( "grid" )
             paragraph.classList.add( "grid-cols-2" )
 
-            paragraph.innerHTML = `<p class="pr-1">${ shade }</p><p class="px-2 w-full" style="background:${ colorShades[shade] }">${ colorShades[shade] }</p>`
+            paragraph.innerHTML = `<p class="pr-1">${ shade }</p>
+                                   <p class="px-2" style="background:${ colorShades[shade] }">${ colorShades[shade] }</p>`
             // paragraph.textContent = `${shade}: ${colorShades[shade]}`
             swatchSection.appendChild( paragraph )
         }
