@@ -11,7 +11,10 @@
 
     <!-- include your CSS here -->
     <link href="../../assets/css/site.css" rel="stylesheet">
-    <link href="../../assets/css/prism.css" rel="stylesheet"/>
+    <link href="../../assets/css/prism.css" rel="stylesheet">
+    <link href="../../assets/css/fontawesome.css" rel="stylesheet">
+    <link href="../../assets/css/brands.css" rel="stylesheet">
+    <link href="../../assets/css/solid.css" rel="stylesheet">
     <!-- include any additional JS here, remembering to DEFER execution -->
     <script defer src="../../assets/js/prism.js"></script>
 </head>
@@ -52,7 +55,7 @@
                 </header>
                 <section class="shadow p-4">
                     <button class="bg-gray-500 text-gray-100
-                                   p-4
+                                   p-4 py-2
                                    hover:bg-gray-800 hover:text-white
                                    transition ease-in-out duration-500">
                         Button
@@ -61,8 +64,66 @@
                 <section>
                     <pre><code class="language-html">
 &lt;button class="bg-gray-500 text-gray-100
-               p-4
+               p-4 py-2
                hover:bg-gray-800 hover:text-white
+               transition ease-in-out duration-500">
+    Button
+&lt;/button>
+                    </code></pre>
+                </section>
+            </article>
+
+            <article class="w-full border border-gray-100 shadow  p-4 flex flex-col gap-4">
+                <header class=" -mx-4 -mt-4">
+                    <h3 class="text-2xl bg-black text-gray-200 p-2 pb-4 w-full">
+                        Button (Push In)
+                    </h3>
+                </header>
+                <section class="shadow p-4">
+                    <button class="bg-gray-100 text-gray-500 border border-gray-500
+                                   shadow shadow-gray-500/50
+                                   p-4 py-2
+                                   hover:shadow-none hover:text-black
+                                   transition ease-in-out duration-500">
+                        Button
+                    </button>
+                </section>
+                <section>
+                    <pre><code class="language-html">
+&lt;button class="bg-gray-100 text-gray-500 border border-gray-500
+               shadow shadow-gray-500/50
+               p-4 py-2
+               hover:shadow-none hover:text-black
+               transition ease-in-out duration-500">
+    Button
+&lt;/button>
+                    </code></pre>
+                </section>
+            </article>
+
+
+            <article class="w-full border border-gray-100 shadow  p-4 flex flex-col gap-4">
+                <header class=" -mx-4 -mt-4">
+                    <h3 class="text-2xl bg-black text-gray-200 p-2 pb-4 w-full">
+                        Button (With Icon)
+                    </h3>
+                </header>
+                <section class="shadow p-4">
+                    <button class="bg-gray-100 text-gray-500 border border-gray-500
+                                   shadow shadow-gray-500/50
+                                   p-4 py-2
+                                   icon-before icon-chevron-right
+                                   hover:shadow-none hover:text-black
+                                   transition ease-in-out duration-500">
+                        Button
+                    </button>
+                </section>
+                <section>
+                    <pre><code class="language-html">
+&lt;button class="bg-gray-100 text-gray-500 border border-gray-500
+               shadow shadow-gray-500/50
+               p-4 py-2
+               hover:shadow-none hover:text-black
                transition ease-in-out duration-500">
     Button
 &lt;/button>

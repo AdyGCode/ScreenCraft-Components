@@ -1,10 +1,10 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colours = require('./colours/colours.json'); // Adjust the path to your JSON file
+const colours = require( './colours/colours.json' ); // Adjust the path to your JSON file
 
+const defaultTheme = require( 'tailwindcss/defaultTheme' )
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
+    content : [
         './index.html',
         './components/**/*.{html,js,php,py,jsx}',
         './colours/**/*.{html,js,php,py,jsx}',
@@ -30,12 +30,14 @@ module.exports = {
     },
 
     plugins: [
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/container-queries'),
-        require('tailwindcss-elevation'),
-        require('tailwindcss-truncate-multiline')(),
-
+        require( '@tailwindcss/typography' ),
+        require( '@tailwindcss/forms' ),
+        require( '@tailwindcss/aspect-ratio' ),
+        require( '@tailwindcss/container-queries' ),
+        require( 'tailwindcss-elevation' ),
+        require( 'tailwindcss-truncate-multiline' )(),
+        require( 'tailwind-fontawesome' )( {
+            version : 6,
+        } ),
     ],
 };
