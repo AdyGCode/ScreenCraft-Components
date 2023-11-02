@@ -19,7 +19,7 @@
     <script defer src="../../assets/js/prism.js"></script>
 </head>
 <body class="bg-gray-100">
-<header class="bg-black text-white/80 sticky top-0 p-4 pb-6 flex flex-row">
+<header class="bg-black text-white/80 sticky top-0 p-4 pb-6 flex flex-row z-10">
     <img alt="Logo" class="w-16" src="../../assets/img/SCC-Logo.svg">
     <h1 class="grow pl-4">ScreenCraft Components</h1>
     <nav class="pt-8">
@@ -27,7 +27,7 @@
             <li><a class="border border-t-0 border-x-0 border-2 border-gray-600 hover:border-gray-300 pb-2" href="../">Home</a>
             </li>
             <li><a class="border border-t-0 border-x-0 border-2 border-gray-200 hover:border-gray-300 pb-2"
-                   href="../components">Components</a></li>
+                   href="../../components">Components</a></li>
             <li><a class="border border-t-0 border-x-0 border-2 border-gray-600 hover:border-gray-300 pb-2" href="../colours">Colours</a>
             </li>
             <li><a class="border border-t-0 border-x-0 border-2 border-gray-600 hover:border-gray-300 pb-2" href="../pages">About</a>
@@ -107,13 +107,13 @@
                     <h3 class="text-2xl bg-black text-gray-200 p-2 pb-4 w-full">
                         Button (With Icon)
                     </h3>
+                    <p class="px-4 pt-4">This uses the FontAwesome Free icons.</p>
                 </header>
                 <section class="shadow p-4">
                     <button class="bg-gray-100 text-gray-500 border border-gray-500
-                                   shadow shadow-gray-500/50
                                    p-4 py-2
-                                   icon-before icon-chevron-right
-                                   hover:shadow-none hover:text-black
+                                   icon-before icon-home
+                                   hover:bg-gray-800 hover:text-gray-200
                                    transition ease-in-out duration-500">
                         Button
                     </button>
@@ -121,9 +121,9 @@
                 <section>
                     <pre><code class="language-html">
 &lt;button class="bg-gray-100 text-gray-500 border border-gray-500
-               shadow shadow-gray-500/50
                p-4 py-2
-               hover:shadow-none hover:text-black
+               icon-before icon-home
+               hover:bg-gray-800 hover:text-gray-200
                transition ease-in-out duration-500">
     Button
 &lt;/button>
