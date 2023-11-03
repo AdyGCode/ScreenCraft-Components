@@ -25,9 +25,10 @@ BETA ONLY
   - npm install tailwind-fontawesome
   - https://github.com/mattpfeffer/tailwind-fontawesome
 
+```shell
 set PATH=%PATH%\;%programdata%\laragon\bin\nodejs\node-v20
-
-npm install && npm update
-
+ ```
+```shell
+npm install && npm update 
 npx tailwindcss -i .\src\input.css -o .\assets\css\site.css --watch
-
+```
