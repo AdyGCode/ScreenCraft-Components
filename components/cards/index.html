@@ -80,44 +80,120 @@
                 </header>
                 <section class="shadow p-4">
 
-                    <section class="w-1/4 border border-gray-500 flex flex-col gap-4">
+                    <div class="w-1/4 border border-gray-500 flex flex-col gap-4 p-4">
                         <p>This card contains text only, no image, just a plain simple text card.</p>
                         <p>It also omits header and footer areas.</p>
-                    </section>
+                        <p>It is 1/4 of the parent container width.</p>
+                    </div>
 
                 </section>
                 <section>
                     <pre><code class="language-html">
-&lt;div class="text-gray-400 bg-gray-800 body-font 
-    w-full container flex flex-col items-start justify-between p-6 
-            mx-auto md:flex-row gap-2">
-    &lt;a class="flex items-center mb-4 font-medium title-font md:mb-0 gap-2
-                  hover:text-gray-200 transition duration-500 ease-in-out">
-        &lt;img src="../../assets/img/SCC-Logo.svg" alt="SCC Logo" class="h-6">
-        &lt;h1 class="text-sm">Site Name&lt;/h1>
-    &lt;/a>
-    &lt;div class="flex flex-wrap text-sm pl-6 ml-6 text-base
-                border-l border-gray-400 grow ">
-        &lt;p class="m-auto">
-            &copy; Copyright 2023 SITE_OWNER, all rights reserved.
-        &lt;/p>
-    &lt;/div>
-    &lt;div class="flex flex-wrap text-sm pl-6 ml-6 text-base border-l border-gray-400 
-                md:mr-auto gap-2">
-        &lt;a href="#"
-           class="border-b border-gray-400 hover:border-gray-200 hover:text-gray-200 
-                  transition duration-500 ease-in-out">Home&lt;/a>
-        &lt;a href="#"
-           class="border-b border-gray-400 hover:border-gray-200 hover:text-gray-200 
-                  transition duration-500 ease-in-out">About&lt;/a>
-        &lt;a href="#"
-           class="border-b border-gray-400 hover:border-gray-200 hover:text-gray-200 
-                  transition duration-500 ease-in-out">Contact&lt;/a>
-        &lt;a href="#"
-           class="border-b border-gray-400 hover:border-gray-200 hover:text-gray-200 
-                  transition duration-500 ease-in-out">Policies&lt;/a>
-    &lt;/div>
-&lt;/div>
+&ltdiv class="w-1/4 border border-gray-500 flex flex-col gap-4 p-4">
+    &ltp>This card contains text only, no image, just a plain simple text card.&lt/p>
+    &ltp>It also omits header and footer areas.&lt/p>
+    &ltp>It is 1/4 of the parent container width.&lt/p>
+&lt/div>
+                    </code></pre>
+                </section>
+            </article>
+
+
+            <article class="w-full border border-gray-100 shadow  p-4 flex flex-col gap-4">
+                <header class=" -mx-4 -mt-4">
+                    <h3 class="text-2xl bg-black text-gray-200 p-2 pb-4 w-full">
+                        Card (Vertical)
+                    </h3>
+                </header>
+                <section class="shadow p-4">
+
+                    <div class="w-1/4 border border-gray-500 flex flex-col gap-4 p-4">
+                        <div class="bg-gray-800 text-gray-200 p-4 -m-4 mb-0">
+                            <h4 class="text-bold text-xl">Card Header</h4>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <p>This card contains text only, no image, just a plain simple text card.</p>
+                            <p>It also omits header and footer areas.</p>
+                            <p>It is 1/4 of the parent container width.</p>
+                        </div>
+                        <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
+                            <p>Card Footer Content</p>
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    <pre><code class="language-html">
+&ltdiv class="w-1/4 border border-gray-500 flex flex-col gap-4 p-4">
+    &ltdiv class="bg-gray-800 text-gray-200 p-4 -m-4 mb-0">
+        &lth4 class="text-bold text-xl">Card Header&lt/h4>
+    &lt/div>
+    &ltdiv class="flex flex-col gap-4">
+        &ltp>This card contains text only, no image, just a plain simple text card.&lt/p>
+        &ltp>It also omits header and footer areas.&lt/p>
+        &ltp>It is 1/4 of the parent container width.&lt/p>
+    &lt/div>
+    &ltdiv class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
+        &ltp>Card Footer Content&lt/p>
+    &lt/div>
+&lt/div>
+                    </code></pre>
+                </section>
+            </article>
+
+            <article class="w-full border border-gray-100 shadow  p-4 flex flex-col gap-4">
+                <header class=" -mx-4 -mt-4">
+                    <h3 class="text-2xl bg-black text-gray-200 p-2 pb-4 w-full">
+                        Card (Vertical)
+                    </h3>
+                </header>
+                <section class="shadow p-4">
+
+                    <div class="w-1/4 border border-gray-500 flex flex-col gap-4 p-4">
+                        <div class="bg-gray-800 text-gray-200 p-4 -m-4 mb-0">
+                            <h4 class="text-bold text-xl">Card Header</h4>
+                        </div>
+                        <div class="-m-4 mb-2 max-h-48 overflow-hidden">
+                            <img src="../../assets/img/2432164872_8c6403c877_c.jpg" alt=""
+                                 class="w-full">
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <p class="attribution text-sm text-gray-500">'<a target="_blank" rel="noopener noreferrer"
+                                                       href="https://www.flickr.com/photos/67662537@N00/2432164872">Rollercoaster</a>'
+                                by <a target="_blank" rel="noopener noreferrer"
+                                      href="https://www.flickr.com/photos/67662537@N00">peve.de</a> is licensed under <a
+                                        target="_blank" rel="noopener noreferrer"
+                                        href="https://creativecommons.org/licenses/by-nd-nc/2.0/jp/?ref=openverse">
+                                    Creative Commons (CC BY-NC-ND 2.0)
+                                </a>
+                            </p>
+                            <p>Card with Header, image, content, and footer</p>
+                            <p>It is 1/4 of the parent container width.</p>
+                        </div>
+                        <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
+                            <p>Card Footer Content</p>
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    <pre><code class="language-html">
+&ltdiv class="w-1/4 border border-gray-500 flex flex-col gap-4 p-4">
+    &ltdiv class="bg-gray-800 text-gray-200 p-4 -m-4 mb-0">
+        &lth4 class="text-bold text-xl">Card Header&lt/h4>
+    &lt/div>
+    &ltdiv class="-m-4 mb-2 max-h-48 overflow-hidden">
+        &ltimg src="../../assets/img/2432164872_8c6403c877_c.jpg" alt="Rollercoaster"
+             class="w-full">
+    &lt/div>
+    &ltdiv class="flex flex-col gap-4">
+        &ltp>Card with Header, image, content, and footer&lt/p>
+        &ltp>It is 1/4 of the parent container width.&lt/p>
+    &lt/div>
+    &ltdiv class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
+        &ltp>Card Footer Content&lt/p>
+    &lt/div>
+&lt/div>
                     </code></pre>
                 </section>
             </article>
