@@ -48,13 +48,15 @@ function generateSwatches( colors ) {
 
 // Function to read and update the color data from colors.json
 function readAndUpdateColors() {
-    fetch( './colours.json' ) // Adjust the path to your JSON file
+    fetch('../colours/colours.json') // Adjust the path to your JSON file
         .then( response => response.json() )
         .then( data => {
+            const storedColours = JSON.parse(localStorage.getItem('colors'))
             const colors = data.colors;
-            // Store the color data in localStorage
-            localStorage.setItem( 'colors', JSON.stringify( colors ) )
-
+            if (storedColours !== colors) {
+                // Store the color data in localStorage
+                localStorage.setItem('colors', JSON.stringify(colors))
+            }
             // Generate and display the swatches
             generateSwatches( colors );
         } )
@@ -64,11 +66,11 @@ function readAndUpdateColors() {
 }
 
 // Check if the colors are already stored in localStorage
-const storedColors = localStorage.getItem( 'colors' )
-
-if ( storedColors ) {
-    generateSwatches( JSON.parse( storedColors ) )
-} else {
-    // If not, read and update the colors from the JSON file
+// const storedColors = localStorage.getItem( 'colors' )
+//
+// if ( storedColors ) {
+//     generateSwatches( JSON.parse( storedColors ) )
+// } else {
+//     // If not, read and update the colors from the JSON file
     readAndUpdateColors()
-}
+// }
