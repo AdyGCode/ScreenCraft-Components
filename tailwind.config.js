@@ -7,7 +7,7 @@ module.exports = {
     content : [
         './index.html',
         './components/**/*.{html,js,php,py,jsx}',
-        './colours/**/*.{html,js,php,py,jsx}',
+        './colours/**/*.{html,js,php,py,jsx,json}',
         './pages/**/*.{html,js,php,py,jsx}',
     ],
 
