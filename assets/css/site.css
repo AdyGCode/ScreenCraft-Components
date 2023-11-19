@@ -840,13 +840,13 @@ select {
 }
 
 .mx-8 {
-    margin-left: 2rem;
-    margin-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .-mb-4 {
@@ -890,11 +890,11 @@ select {
 }
 
 .mt-8 {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .mb-8 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -986,7 +986,7 @@ select {
 }
 
 .list-disc {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
 .grid-flow-row {
@@ -1120,8 +1120,8 @@ select {
 }
 
 .border-gray-800 {
-    border-color: rgb(31 41 55 / var(--tw-border-opacity));
-    --tw-border-opacity: 1;
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -1160,8 +1160,8 @@ select {
 }
 
 .bg-gray-600 {
-    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-    --tw-bg-opacity: 1;
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
 .p-1 {
@@ -1210,8 +1210,8 @@ select {
 }
 
 .px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .pb-2 {
