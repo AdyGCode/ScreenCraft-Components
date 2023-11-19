@@ -1,5 +1,17 @@
 const baseColourCount = 22
 
+function getContrastYIQ(hexValue = "000000") {
+    const hexColour = hexValue.substring(0, 1) === "#" ? hexValue.substring(1,) : hexValue
+    const rh = hexColour.substring(0, 2)
+    const r = parseInt(rh, 16)
+    const gh = hexColour.substring(2, 4)
+    const g = parseInt(gh, 16)
+    const bh = hexColour.substring(4, 6)
+    const b = parseInt(bh, 16)
+    const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000
+    return (yiq >= 148) ? 'text-black' : 'text-white'
+}
+
 function updateNumbersOfColours(base = baseColourCount, count = 0) {
     const colourCount = document.getElementById('additionalColours')
     const baseCount = document.getElementById('baseColours')
@@ -23,7 +35,7 @@ function generateSwatches(baseCount = baseColourCount, colours) {
             swatchSection.classList.add("flex")
             swatchSection.classList.add("flex-col")
             swatchSection.classList.add("w-full")
-            swatchSection.classList.add("p-0")
+            swatchSection.classList.add("pb-4")
             swatchSection.classList.add("border")
             // swatchSection.classList.add(swatchCount > baseColourCount ? 'border-gray-700' : 'border-black')
             swatchSection.classList.add("shadow")
@@ -36,19 +48,22 @@ function generateSwatches(baseCount = baseColourCount, colours) {
             heading.classList.add('text-center')
             heading.classList.add('font-bold')
             heading.classList.add('p-2')
-            heading.classList.add('-mx-2')
-            heading.classList.add('mb-6')
+            heading.classList.add('my-8')
+            heading.classList.add('mb-4')
+            heading.classList.add('-mx-6')
             swatchSection.appendChild(heading)
 
             for (const shade in colourShades) {
+                const textColour = getContrastYIQ(colourShades[shade])
+
                 let paragraph = document.createElement('div')
                 paragraph.classList.add("w-full")
                 paragraph.classList.add("grid")
                 paragraph.classList.add("grid-cols-3")
-                paragraph.classList.add("px-2")
+                paragraph.classList.add("px-4")
                 paragraph.classList.add("py-1")
                 paragraph.innerHTML = `<p class="col-span-1">${shade}</p>
-                                   <p class="col-span-2 px-2" style="background:${colourShades[shade]}">${colourShades[shade]}</p>`
+                                   <p class="col-span-2 px-2 ${textColour}" style="background:${colourShades[shade]}">${colourShades[shade]}</p>`
 
                 swatchSection.appendChild(paragraph)
             }

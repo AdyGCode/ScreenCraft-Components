@@ -844,6 +844,11 @@ select {
     margin-right: 2rem;
 }
 
+.mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .-mb-4 {
   margin-bottom: -1rem;
 }
@@ -882,6 +887,14 @@ select {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
 }
 
 .block {
