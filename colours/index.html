@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SCC</title>
 
@@ -46,13 +47,18 @@
 <main class="w-4/5 mx-auto bg-white pb-8">
     <article class="flex flex-col gap-8">
         <header class="m-8 mb-0">
-            <h2 class="text-2xl font-bold text-gray-500">Colours</h2>
+            <h2 class="text-2xl font-bold text-gray-700">Colours</h2>
+        </header>
+        <section class="flex flex-col gap-4">
             <p>This page contains the default 22 colours from TailwindCSS plus over 60 additional colours
                 (2023-11-05).</p>
-            <p>When using these colours the normal "BASE" or "DEFAULT" value will be the 500 point. Some later colours
-                show the DEFAULT which may be offset to provide the full 50-950 range of tints and shades.</p>
+            <p>When using these colours the normal "BASE" or "DEFAULT" value will be the 500 point.</p>
+            <p>Some colours will have had teh DEFAULT moved from the "500" midpoint to a value above or below. This is
+                to provide the full 50-950 range of tints and shades.</p>
+            <p>There are also cases where the tints and shades have been adjusted to ensure that the "50" point is not
+                white (#FFFFFF) and the "950" point is not black (#000000).</p>
             <p>DEFAULT colours have also been provided by staff and students at NMTAFE, and added to this list using the
-                following web sitesL</p>
+                following websites:</p>
             <ul>
                 <li><a href="https://uicolors.app/create">https://uicolors.app/create</a></li>
                 <li><a href="https://www.tailwindshades.com/">https://www.tailwindshades.com/</a></li>
@@ -61,7 +67,11 @@
                 <li><a href="https://www.flatuicolorpicker.com/">https://www.flatuicolorpicker.com/</a></li>
                 <li><a href="#">#6</a></li>
             </ul>
-        </header>
+        </section>
+        <section class="grid grid-cols-2">
+            <h4 class="text-xl m-4 p-4" id="baseColours"></h4>
+            <h4 class="text-xl m-4 p-4" id="additionalColours"></h4>
+        </section>
         <div class="grid grid-cols-4 grid-flow-row p-4 gap-2" id="swatches">
             <section class="p-4">
                 <h4 class="text-xl ">Contact Us</h4>

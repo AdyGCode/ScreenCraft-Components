@@ -1,11 +1,18 @@
-function generateSwatches(colors) {
+function updateNumbersOfColours(base = 22, count = 0) {
+    const colourCount = document.getElementById('additionalColours')
+    const baseCount = document.getElementById('baseColours')
+    colourCount.innerText = `{count-base} Custom colours.`
+    baseCount.innerText = `{base} Base colours.`
+}
+
+function generateSwatches(colours) {
     const swatchesContainer = document.getElementById('swatches')
 
     swatchesContainer.innerHTML = ''
 
-    if (typeof colors !== "array") {
-        for (const colorName in colors) {
-            const colorShades = colors[colorName]
+    if (typeof colours !== "array") {
+        for (const colourName in colours) {
+            const colourShades = colours[colourName]
             let swatchSection = document.createElement('section')
             swatchSection.classList.add("flex")
             swatchSection.classList.add("flex-col")
@@ -16,7 +23,7 @@ function generateSwatches(colors) {
             swatchSection.classList.add("border-gray-500")
             swatchSection.classList.add("shadow")
             let heading = document.createElement('h3')
-        heading.textContent = colorName;
+            heading.textContent = colourName;
             heading.classList.add('w-full')
             heading.classList.add('bg-black')
             heading.classList.add('text-white')
@@ -27,7 +34,7 @@ function generateSwatches(colors) {
             heading.classList.add('mb-6')
             swatchSection.appendChild(heading)
 
-            for (const shade in colorShades) {
+            for (const shade in colourShades) {
                 let paragraph = document.createElement('div')
                 paragraph.classList.add("w-full")
                 paragraph.classList.add("grid")
@@ -35,7 +42,7 @@ function generateSwatches(colors) {
                 paragraph.classList.add("px-2")
                 paragraph.classList.add("py-1")
                 paragraph.innerHTML = `<p class="col-span-1">${shade}</p>
-                                   <p class="col-span-2 px-2" style="background:${colorShades[shade]}">${colorShades[shade]}</p>`
+                                   <p class="col-span-2 px-2" style="background:${colourShades[shade]}">${colourShades[shade]}</p>`
 
                 swatchSection.appendChild(paragraph)
         }
@@ -45,21 +52,31 @@ function generateSwatches(colors) {
     }
 }
 
-function readAndUpdateColors() {
+function readAndUpdateColours() {
     fetch('../colours/colours.json')
         .then(response => response.json())
         .then(data => {
-            const storedColours = JSON.parse(localStorage.getItem('colors'))
-            const colors = data.colors;
-            if (storedColours !== colors) {
-                localStorage.setItem('colors', JSON.stringify(colors))
+            const storedColours = JSON.parse(localStorage.getItem('colours'))
+            const storedColourCount = JSON.parse(localStorage.getItem('colourCount'))
+
+            if (storedColours !== colours) {
+                localStorage.setItem('colours', JSON.stringify(colours))
             }
-            generateSwatches(colors);
+            generateSwatches(colours);
+
+            const colours = data.colours;
+            const colourCount = data.colours.length;
+
+            if (storedColourCount !== colourCount) {
+                localStorage.setItem('colourCount', JSON.stringify(colourCount))
+            }
+            updateNumbersOfColours(colourCount);
+
         })
         .catch(error => {
-            console.error('Error reading the color data file:', error)
+            console.error('Error reading the colour data file:', error)
         })
 }
 
 
-readAndUpdateColors()
+readAndUpdateColours()
