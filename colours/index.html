@@ -45,7 +45,7 @@
     </nav>
 </header>
 <main class="w-4/5 mx-auto bg-white pb-8">
-    <article class="flex flex-col gap-8">
+    <article class="flex flex-col gap-8 px-8">
         <header class="m-8 mb-0">
             <h2 class="text-2xl font-bold text-gray-700">Colours</h2>
         </header>
@@ -53,13 +53,13 @@
             <p>This page contains the default 22 colours from TailwindCSS plus over 60 additional colours
                 (2023-11-05).</p>
             <p>When using these colours the normal "BASE" or "DEFAULT" value will be the 500 point.</p>
-            <p>Some colours will have had teh DEFAULT moved from the "500" midpoint to a value above or below. This is
+            <p>Some colours will have had the DEFAULT moved from the "500" midpoint to a value above or below. This is
                 to provide the full 50-950 range of tints and shades.</p>
             <p>There are also cases where the tints and shades have been adjusted to ensure that the "50" point is not
                 white (#FFFFFF) and the "950" point is not black (#000000).</p>
             <p>DEFAULT colours have also been provided by staff and students at NMTAFE, and added to this list using the
                 following websites:</p>
-            <ul>
+            <ul class="pl-6 ml-6 list-disc">
                 <li><a href="https://uicolors.app/create">https://uicolors.app/create</a></li>
                 <li><a href="https://www.tailwindshades.com/">https://www.tailwindshades.com/</a></li>
                 <li><a href="https://coolors.co/colors">https://coolors.co/colors</a></li>
@@ -68,11 +68,11 @@
                 <li><a href="#">#6</a></li>
             </ul>
         </section>
-        <section class="grid grid-cols-2">
-            <h4 class="text-xl m-4 p-4" id="baseColours"></h4>
-            <h4 class="text-xl m-4 p-4" id="additionalColours"></h4>
+        <section class="grid grid-cols-2 gap-8 text-white">
+            <h4 class="text-xl p-4 bg-black" id="baseColours"></h4>
+            <h4 class="text-xl p-4 bg-gray-600" id="additionalColours"></h4>
         </section>
-        <div class="grid grid-cols-4 grid-flow-row p-4 gap-2" id="swatches">
+        <div class="grid grid-cols-4 grid-flow-row gap-8" id="swatches">
             <section class="p-4">
                 <h4 class="text-xl ">Contact Us</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam assumenda cupiditate
