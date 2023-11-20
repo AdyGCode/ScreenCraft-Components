@@ -53,17 +53,18 @@ function generateSwatches(baseCount = baseColourCount, colours) {
             heading.classList.add('-mx-6')
             swatchSection.appendChild(heading)
 
+
             for (const shade in colourShades) {
                 const textColour = getContrastYIQ(colourShades[shade])
-
                 let paragraph = document.createElement('div')
                 paragraph.classList.add("w-full")
                 paragraph.classList.add("grid")
-                paragraph.classList.add("grid-cols-3")
+                paragraph.classList.add("grid-cols-5")
                 paragraph.classList.add("px-4")
                 paragraph.classList.add("py-1")
-                paragraph.innerHTML = `<p class="col-span-1">${shade}</p>
-                                   <p class="col-span-2 px-2 ${textColour}" style="background:${colourShades[shade]}">${colourShades[shade]}</p>`
+                paragraph.innerHTML = `<p class="col-span-3 md:col-span-2 ">${shade} </p>
+                                   <p class="col-span-2 md:col-span-3 px-2 ${textColour}" 
+                                      style="background:${colourShades[shade]}">${colourShades[shade]}</p>`
 
                 swatchSection.appendChild(paragraph)
             }
