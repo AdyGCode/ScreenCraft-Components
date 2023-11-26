@@ -7,7 +7,7 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>SCC | Components | Forms</title>
 
-        <!-- include Fonts here -->
+    <!-- include Fonts here -->
     <link href="https://fonts.cdnfonts.com/css/atkinson-hyperlegible-2" rel="stylesheet">
 
     <!-- include your CSS here -->
@@ -157,7 +157,42 @@
                 </header>
                 <section class="shadow p-4">
 
-                    EXAMPLE CODE HERE
+                    <form method="post" action="#"
+                          class="flex flex-col gap-4 ">
+
+                        <div class="flex flex-row gap-4">
+                            <label class="w-1/6" for="inputDemo">Text Input:</label>
+                            <input class="w-5/6" type="text" id="inputDemo">
+                        </div>
+
+                        <div class="flex flex-row gap-4">
+                            <label class="w-1/6" for="numberDemo">Number Input:</label>
+                            <input class="w-5/6" type="number" id="numberDemo">
+                        </div>
+
+                        <div class="flex flex-row gap-4">
+                            <label class="w-1/6" for="passwordDemo">Password Input:</label>
+                            <input class="grow" type="password" id="passwordDemo">
+                        </div>
+
+                        <div class="flex flex-row gap-4">
+                            <label class="w-1/6" for="textDemo">Text Area:</label>
+                            <textarea class="w-5/6" type="text" id="textDemo"></textarea>
+                        </div>
+
+                        <div class="flex flex-row gap-4">
+                            <div class="w-1/6"></div>
+                            <button
+                                    class="w-1/6 p-1 bg-gray-300 text-black hover:bg-gray-600 hover:text-white transition ease-in-out duration-350">
+                                Save
+                            </button>
+                            <button
+                                    class="w-1/6 p-1 bg-gray-300 text-black hover:bg-gray-600 hover:text-white transition ease-in-out duration-350">
+                                Cancel
+                            </button>
+                        </div hover:bg-gray-600 hover:text-white animate ease-in-out>
+
+                    </form>
 
                 </section>
                 <section>
@@ -172,14 +207,18 @@
             <article class="w-full border border-gray-100 shadow  p-4 flex flex-col gap-4">
                 <header class=" -mx-4 -mt-4">
                     <h3 class="text-2xl bg-black text-gray-200 p-2 pb-4 w-full">
-                        Component Name
+                        Basic Form
                     </h3>
                 </header>
                 <section class="shadow p-4">
-                    <p>Component demo</p>
+
+                    EXAMPLE CODE HERE
+
                 </section>
                 <section>
-                    <pre><code class="language-html">&lt;p>Component Code&lt;/p></code></pre>
+                    <pre><code class="language-html">
+                        HTML CODE HERE REPLACE &lt; with &amp;&lt;
+                    </code></pre>
                 </section>
             </article>
             <!-- /Component Template -->
