@@ -9,12 +9,13 @@ module.exports = {
         './components/**/*.{html,js,php,py,jsx}',
         './colours/**/*.{html,js,php,py,jsx,json}',
         './pages/**/*.{html,js,php,py,jsx}',
+        './testing/**/*.{html,js,php,py,jsx}',
     ],
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Montreal', ...defaultTheme.fontFamily.sans],
+                sans: ['Atkinson Hyperlegible', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 ...colours,

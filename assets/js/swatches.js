@@ -60,7 +60,7 @@ function generateSwatches(baseCount = baseColourCount, colours) {
                 paragraph.classList.add("w-full")
                 paragraph.classList.add("grid")
                 paragraph.classList.add("grid-cols-5")
-                paragraph.classList.add("px-4")
+                paragraph.classList.add("px-2")
                 paragraph.classList.add("py-1")
                 paragraph.innerHTML = `<p class="col-span-3 md:col-span-2 ">${shade} </p>
                                    <p class="col-span-2 md:col-span-3 px-2 ${textColour}" 
